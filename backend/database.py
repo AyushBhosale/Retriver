@@ -3,7 +3,7 @@ from fastapi import Depends
 from sqlalchemy.orm import sessionmaker,session
 from sqlalchemy.ext.declarative import declarative_base
 from typing import Annotated
-URL="mysql+pymysql://root:suidj%2179%40njpd%3Br@localhost:3306/retriver"
+URL="mysql+pymysql:///retriver"
 engine = create_engine(URL)
 
 SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
